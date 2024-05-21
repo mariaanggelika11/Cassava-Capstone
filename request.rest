@@ -1,0 +1,45 @@
+//Create a User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Maria Anggelika Update",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "",
+    "role": "admin"
+} 
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+//Get Single Users
+GET http://localhost:5000/users/af1c1cff-2181-4938-be30-c671c2d2f31e
+
+###
+// Update Users
+PATCH  http://localhost:5000/users/af1c1cff-2181-4938-be30-c671c2d2f31e
+Content-Type: application/json
+
+{
+    "name": "Maria Anggelika Update",
+    "email": "admin@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+} 
+
+###
+// delete a user
+DELETE http://localhost:5000/users/4591ac45-2684-4fbe-bc76-b7126d2d1314
+
+###
+// login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
